@@ -14,11 +14,13 @@ fastify.register(cors, {
     methods: ["GET", "POST", "PUT", "DELETE"]
 });
 
+const PORT = process.env.PORT || 3000;
+
 async function start() {
     try {
 
-        await fastify.listen({ port: 3000, host: '0.0.0.0' });
-        console.log('Server running on port 3000');
+        await fastify.listen({ port: PORT, host: '0.0.0.0' });
+        console.log(`Server running on port ${PORT}`);
     } catch (error) {
         console.log(error);
         process.exit();
