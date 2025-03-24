@@ -5,9 +5,9 @@ async function getLoginData(req, res){
         
         let {name, email, password} = req.body;
         
-        let user = new User({name, email, password});
-        await user.save();
-        console.log('User saved')
+        // let user = new User({name, email, password});
+        // await user.save();
+        // console.log('User saved')
 
         res.code(200).send('User saved succesfully');
 
