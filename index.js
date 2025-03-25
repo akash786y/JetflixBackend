@@ -1,7 +1,8 @@
+require('dotenv').config();
 const fastify = require('fastify')()
 const connectDB = require("./mongo");
 const cors = require('@fastify/cors');
-require('dotenv').config();
+
 
 const route = require('./routes/route')
 
