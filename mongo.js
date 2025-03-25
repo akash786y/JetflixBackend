@@ -4,6 +4,8 @@ const connectDB = async () => {
   try {
 
     if(!process.env.MONGO_URI){
+        console.log(process.env);
+        console.log(process.env.MONGO_URI);
         console.log(`Mongo uri not loaded`);
         process.exit(1);
     }
